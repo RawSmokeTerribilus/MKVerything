@@ -25,7 +25,7 @@ Ideal for modernizing large media libraries (NAS, Plex, Jellyfin) before process
     ```
 3.  Run it inside your media folder:
     ```bash
-    ./remux_master.sh
+    ./MKVerything.sh
     ```
 
 ## 📋 Requirements
