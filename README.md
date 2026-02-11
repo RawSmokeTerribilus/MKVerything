@@ -33,4 +33,4 @@ Ideal for modernizing large media libraries (NAS, Plex, Jellyfin) before process
 * ffmpeg
 
 ## 📝 License
-MIT
+GNU AFFERO GENERAL PUBLIC LICENSE
