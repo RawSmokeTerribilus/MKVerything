@@ -18,10 +18,10 @@ Ideal for modernizing large media libraries (NAS, Plex, Jellyfin) before process
 * **Fast:** Skips files that are already converted.
 
 ## 🛠️ Usage
-1.  Download `remux_master.sh`.
+1.  Download `MKVerything.sh`.
 2.  Give execution permissions:
     ```bash
-    chmod +x remux_master.sh
+    chmod +x MKVerything.sh
     ```
 3.  Run it inside your media folder:
     ```bash
