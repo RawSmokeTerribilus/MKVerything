@@ -2,7 +2,7 @@
 
 # ==============================================================================
 # REMUX MASTER - V10 (Gold Edition)
-# Author: [Tu Usuario/Nombre]
+# Author: RawSmokeTerribilus
 # Description: Mass convert legacy video containers (AVI, MP4, OGM...) to MKV.
 # Features:
 #   - Lossless conversion (copy codec) whenever possible.
