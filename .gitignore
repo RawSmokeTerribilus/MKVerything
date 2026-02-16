@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Logs y Persistencia
+*.log
+states/
+
+# Build y Binarios
+build/
+dist/
+bin/
+*.spec
+*.exe
+MKVerything
