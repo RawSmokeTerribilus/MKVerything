@@ -157,3 +157,7 @@ Para desarrolladores que quieran modificar o ejecutar el código directamente.
    Se ha cambiado de bash a python el script original para combinar los procesos de ffmpeg y makemkv en una sola herramienta.
 
    El código ha sido comentado para facilitar futuras modificaciones.
+
+📝 TODO del repo:
+
+[CRÍTICO] Refuerzo de Seguridad (Legacy Verification): Implementar un sistema de doble validación post-proceso. No borrar el archivo original hasta que FFmpeg confirme que el flujo de salida es coherente y que la duración del MKV coincide (margen <1s) con la del original, de forma redundante.
