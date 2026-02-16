@@ -136,9 +136,9 @@ Para desarrolladores que quieran modificar o ejecutar el código directamente.
 
 ⚖️ Filosofía y Advertencias
 
-   ISOs Intocables: El script extrae el contenido, pero jamás borra el archivo ISO original. Los "masters" se respetan.
+   ISOs Intocables: El script extrae el contenido, pero jamás borra el archivo ISO original. Los "masters" se respetan. El programa pide una ruta de destino al iniciarse, esa ruta solo afecta a las extracciones de ISO que son colocadas ahí en una jerarquía de directorios que se crea automáticamente, es decir, puedes elegir una ruta de extracción diferente para las imágenes ISO. (No ocurre lo mismo en el caso de los archivos de vídeo con codecs obsoletos)
     
-   Los archivos "legacy codec" .avi, .mp4, .wmv, etc. son eliminados tras un procesamiento exitoso, de forma automática, inmediatamente después de verificar el archivo obtenido.
+   Los archivos "legacy codec" .avi, .mp4, .wmv, etc. son eliminados tras un procesamiento exitoso. Repito, exterminados. Te lo digo de otra forma: "The discombobulator, I'm not allowed to talk about it..." Y de forma automática, inmediatamente después de verificar el archivo obtenido, sin preguntar. Dicho archivo .mkv sustituye al original en la misma ubicación en la que estaba. La respuesta es SI, se recomienda hacer unas pruebas antes. de todas formas, la lógica del programa es robusta, lo intenta y si no lo consiguiese, no lo toca. La revisión que realiza del archivo es escrupulosa. En mi caso el éxito ha sido del 100% de 15.000 archivos, los únicos que no ha podido convertir eran inservibles, estaban rotos. Si se puede ver en vlc, incluso con el timeline roto, se puede pasar por MKVerything y te dará la mejor versión posible de lo que había.
 
    Spanglish Edition: Interfaz diseñada en castellano para la comunidad. Si un usuario angloparlante tiene dudas... que espabile.
 
