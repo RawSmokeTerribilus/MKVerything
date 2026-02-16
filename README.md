@@ -134,13 +134,17 @@ Para desarrolladores que quieran modificar o ejecutar el código directamente.
 
    Lanza el núcleo: python launcher.py.
 
-⚖️ Filosofía y Advertencias
+⚖️ Filosofía y Advertencias (LEER ANTES DE USAR)
 
-   ISOs Intocables: El script extrae el contenido, pero jamás borra el archivo ISO original. Los "masters" se respetan. El programa pide una ruta de destino al iniciarse, esa ruta solo afecta a las extracciones de ISO que son colocadas ahí en una jerarquía de directorios que se crea automáticamente, es decir, puedes elegir una ruta de extracción diferente para las imágenes ISO. (No ocurre lo mismo en el caso de los archivos de vídeo con codecs obsoletos)
-    
-   Los archivos "legacy codec" .avi, .mp4, .wmv, etc. son eliminados tras un procesamiento exitoso. Repito, exterminados. Te lo digo de otra forma: "The discombobulator, I'm not allowed to talk about it..." Y de forma automática, inmediatamente después de verificar el archivo obtenido, sin preguntar. Dicho archivo .mkv sustituye al original en la misma ubicación en la que estaba. La respuesta es SI, se recomienda hacer unas pruebas antes. de todas formas, la lógica del programa es robusta, lo intenta y si no lo consiguiese, no lo toca. La revisión que realiza del archivo es escrupulosa. En mi caso el éxito ha sido del 100% de 15.000 archivos, los únicos que no ha podido convertir eran inservibles, estaban rotos. Si se puede ver en vlc, incluso con el timeline roto, se puede pasar por MKVerything y te dará la mejor versión posible de lo que había.
+   ISOs Intocables: El script extrae el contenido, pero jamás borra el archivo ISO original. Los "masters" se respetan. Al iniciar el programa, se te pedirá una ruta de destino específica para las extracciones; allí se creará automáticamente la jerarquía de directorios. Esto permite mantener tus imágenes de disco en un almacenamiento y los archivos listos para Plex/Jellyfin en otro.
 
-   Spanglish Edition: Interfaz diseñada en castellano para la comunidad. Si un usuario angloparlante tiene dudas... que espabile.
+   Exterminio de Codecs Obsoletos: A diferencia de las ISOs, los archivos de vídeo individuales (.avi, .mp4, .wmv, etc.) son eliminados tras un procesamiento exitoso. El nuevo archivo .mkv sustituye al original en la misma ubicación exacta. Como diría aquel: "The discombobulator... I'm not allowed to talk about it". El proceso es automático y ocurre inmediatamente después de verificar la integridad del archivo obtenido.
+
+   Robustez y Seguridad: Aunque el programa es implacable, también es escrupuloso. Si el proceso falla o el archivo resultante no pasa el control de calidad, el original no se toca. En pruebas reales sobre 15.000 archivos, la tasa de éxito ha sido del 100%; los únicos fallos fueron archivos corruptos que ni siquiera eran legibles. Si VLC puede abrirlo (aunque el timeline esté roto), MKVerything lo rescatará.
+
+   Pruebas Recomendadas: Dado que el script borra los archivos originales (Legacy), se recomienda encarecidamente realizar pruebas con un puñado de archivos antes de lanzarlo contra toda la biblioteca.
+
+   Spanglish Edition: Interfaz diseñada por y para la comunidad hispana. Si un usuario angloparlante tiene dudas... que espabile.
 
 💡 ¿Qué ha mejorado en esta versión?
 
