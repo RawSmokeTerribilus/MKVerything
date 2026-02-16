@@ -102,9 +102,9 @@ El sistema necesita "motores" externos para procesar el vídeo. Tienes dos forma
 
 ¿Dónde conseguirlos?
 
-   FFmpeg/FFprobe: Descargar aquí. Necesitas las Static Builds (un solo .exe o binario).
+   FFmpeg/FFprobe: Descargar aquí [https://ffmpeg.org/download.html]. Necesitas las Static Builds (un solo .exe o binario).
 
-   MakeMKV (makemkvcon): [https://ffmpeg.org/download.html]. En Linux, instala el paquete makemkv-bin. En Windows, busca el makemkvcon.exe en la carpeta de instalación.
+   MakeMKV (makemkvcon): En Windows, busca el makemkvcon.exe en la carpeta de instalación descargar e instalar de aquí [https://www.makemkv.com/download/]. En Linux, instrucciones aquí [https://forum.makemkv.com/forum/viewtopic.php?f=3&t=224] instala el paquete makemkv-bin.
 
 🚀 Guía de Uso "Para Dummies"
 
