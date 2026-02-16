@@ -97,4 +97,4 @@ Para desarrolladores que quieran modificar o ejecutar el código directamente.
 
     Bloques de Código Limpios: He usado bloques de Markdown estándar que son compatibles con casi cualquier visor web y no se rompen al copiar.
 
-    Contexto de Instalación: He incluido menciones a la instalación de librerías como requests y el manejo del PATH que vimos en la terminal.
+    Contexto de Instalación: He incluido menciones a la instalación de librerías como requests.
