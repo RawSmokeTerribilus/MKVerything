@@ -114,7 +114,7 @@ Si te has bajado la Versión Release (Portable), sigue estos pasos:
     
    Prepara los binarios: Revisa los archivos de ffmpeg y makemkvcon en la carpeta /bin. Sin esto, el tanque no arranca.
     
-   Si por cualquier motivo los archivos de ffmpeg y makemkvcon no estuviesen en la Release, mira como obtenerlos en el paso anterior "Gestión de Binarios.
+   Si por cualquier motivo los archivos de ffmpeg y makemkvcon no estuviesen en la Release, mira como obtenerlos en el paso anterior "Gestión de Binarios".
 
    Lanzamiento: 
     
@@ -146,7 +146,7 @@ Para desarrolladores que quieran modificar o ejecutar el código directamente.
 
    Spanglish Edition: Interfaz diseñada por y para la comunidad hispana. Si un usuario angloparlante tiene dudas... que espabile.
 
-💡 ¿Qué ha mejorado en esta versión?
+💡 ¿Qué ha mejorado en esta versión?git commit -m "old script removal"
 
    Estructura Jerárquica: He añadido una sección de "Organización Técnica" para que el usuario sepa dónde van los binarios y el .env.
 
