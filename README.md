@@ -23,7 +23,35 @@
 
 🎯 La Misión
 
-MKVerything es un "tanque de guerra" diseñado para la purificación automatizada de bibliotecas multimedia. Su objetivo es rescatar contenido atrapado en formatos obsoletos o imágenes de disco pesadas y unificarlo en contenedores MKV modernos sin intervención humana constante.
+Un "tanque de guerra" diseñado para la purificación automatizada de bibliotecas multimedia. Su objetivo es rescatar contenido atrapado en formatos obsoletos o imágenes de disco pesadas y unificarlo en contenedores MKV modernos sin intervención humana constante.
+
+🎯 Escenarios de Combate (Casos de Uso)
+
+MKVerything no es solo un conversor; es el eslabón perdido en tu cadena de automatización multimedia.
+1. El Pre-Procesador para Tdarr (The Space Saver)
+
+    El Problema: Tdarr es una bestia ahorrando hasta un 50-60% de espacio en disco, pero es extremadamente "delicado". Si el archivo original no es MKV, tiene un indexado corrupto o timestamps rotos, Tdarr se traba o genera errores de transcodificación.
+
+    La Solución: Usa MKVerything como filtro de entrada. El tanque estandariza cualquier basura legacy a un MKV limpio y bien indexado. Una vez que el archivo ha pasado por el "Nivel 4 de Resurrección", Tdarr podrá comprimirlo a H.265 sin pestañear.
+
+2. Preparación de Subidas (The Uploader's Wingman)
+
+    El Problema: Scripts de subida automática como EMUploadrr o Uploadrr son el estándar para compartir contenido, pero no hablan .avi. Trabajar con contenido antiguo (años 90/2000) suele entorpecer el flujo de trabajo porque estos scripts fallan al intentar procesar formatos legacy.
+
+    La Solución: MKVerything prepara el terreno. Convierte esos rescates de trackers antiguos a MKV compatibles. Incluso en trackers donde no se permite el uso de scripts automáticos para subir, puedes usar MKVerything en combinación con un dry run de Uploadrr para generar automáticamente los NFOs, capturas y mediainfo de forma profesional.
+
+3. Estandarización de Contenedores (The MKV Supremacy)
+
+    El Problema: El formato AVI es una reliquia que no permite metadatos modernos, múltiples pistas de audio con etiquetas de idioma o subtítulos internos de calidad.
+
+    La Solución: Al migrar todo a MKV, desbloqueas el verdadero potencial de tu biblioteca. Podrás usar scripts posteriores para inyectar carátulas (covers), metadatos avanzados, capítulos y subtítulos PGS/SRT dentro del mismo archivo. MKVerything te da el lienzo en blanco perfecto (el contenedor MKV) sobre el que construir tu biblioteca definitiva.
+
+4. Arqueología Digital (The Legacy Rescuer)
+
+    El Problema: Tienes carpetas olvidadas con archivos .divx, .mpg o .m4v que tu Smart TV o tu Plex ya no quieren reproducir o que presentan artefactos visuales.
+
+    La Solución: Lanzas el tanque y el Sabueso TMDB identifica cada pieza, le pone nombre real y año, y lo convierte a un estándar que funcionará en cualquier dispositivo del siglo XXI.
+
 🛠️ Lógica de Supervivencia (4-Level Core)
 
 A diferencia de los convertidores estándar, este script emplea una agresividad escalonada para asegurar que ningún archivo se quede atrás:
@@ -81,10 +109,16 @@ El sistema necesita "motores" externos para procesar el vídeo. Tienes dos forma
 🚀 Guía de Uso "Para Dummies"
 
 Si te has bajado la Versión Release (Portable), sigue estos pasos:
-
+    
+    Extrae el contenido de los .zip descargados donde quieras tener el proyecto/programa
+    
     Prepara los binarios: Revisa los archivos de ffmpeg y makemkvcon en la carpeta /bin. Sin esto, el tanque no arranca.
+    
+    Si por cualquier motivo los archivos de ffmpeg y makemkvcon no estuviesen en la Release, mira como obtenerlos en el paso anterior "Gestión de Binarios.
 
-    Lanzamiento: * Windows: Ejecuta MKVerything.bat.
+    Lanzamiento: 
+    
+        Windows: Ejecuta MKVerything.bat.
 
         Linux: Ejecuta MKVerything.sh.
 
@@ -103,6 +137,8 @@ Para desarrolladores que quieran modificar o ejecutar el código directamente.
 ⚖️ Filosofía y Advertencias
 
     ISOs Intocables: El script extrae el contenido, pero jamás borra el archivo ISO original. Los "masters" se respetan.
+    
+    Los archivos "legacy codec" .avi, .mp4, .wmv, etc. son eliminados tras un procesamiento exitoso, de forma automática, inmediatamente después de verificar el archivo obtenido.
 
     Spanglish Edition: Interfaz diseñada en castellano para la comunidad. Si un usuario angloparlante tiene dudas... que espabile.
 
