@@ -48,30 +48,47 @@ El motor de metadatos automatiza la identificación mediante la API de TMDB:
 
     Organización: Crea estructuras de carpetas por título y año de forma automática.
 
-📂 Organización y Estructura Técnica
+📂 Anatomía del Proyecto (Modo Arquitecto)
 
-Para que el sistema funcione, los archivos deben estar organizados de la siguiente manera:
+Si vas a modificar el código o ejecutarlo desde la fuente, este es el propósito de cada módulo:
 
-    Raíz del proyecto: Contiene los scripts principales (launcher.py, extract.py, etc.) o el ejecutable (.exe / .sh).
+    launcher.py: El punto de entrada. Gestiona la interfaz TUI, la secuencia de arranque y la inyección de variables de entorno.
 
-    Carpeta /bin: CRÍTICO. Aquí deben residir los binarios de ffmpeg, ffprobe y makemkvcon. Sin ellos, el tanque no tiene munición.
+    extract.py: El corazón del tanque. Contiene la lógica de los 4 niveles de supervivencia y el flujo principal de trabajo.
 
-    Archivo .env: Almacena tu clave de API privada (TMDB_API_KEY). Se incluye un example.env como plantilla.
+    analyzer.py: El especialista en discos. Escanea las ISOs y detecta los títulos mediante makemkvcon.
+
+    metadata_provider.py: El "Sabueso". Gestiona las peticiones a la API de TMDB y el filtrado de nombres.
+
+    persistence.py: El libro de bitácora. Evita procesar archivos duplicados y guarda el estado de la misión en /states.
+
+    mediainfo.py: El perito técnico. Analiza los flujos de audio y vídeo usando ffprobe.
+    
+🔧 Gestión de Binarios (Munición)
+
+El sistema necesita "motores" externos para procesar el vídeo. Tienes dos formas de configurarlos:
+
+    Uso de carpeta /bin (Recomendado para Portables): Descarga los ejecutables y colócalos dentro de la carpeta /bin del proyecto. El script los detectará automáticamente.
+
+    Instalación en Sistema: Si prefieres no usar la carpeta /bin, asegúrate de que los comandos ffmpeg y makemkvcon respondan en tu terminal (añadidos al PATH).
+
+¿Dónde conseguirlos?
+
+    FFmpeg/FFprobe: Descargar aquí. Necesitas las Static Builds (un solo .exe o binario).
+
+    MakeMKV (makemkvcon): [https://ffmpeg.org/download.html]. En Linux, instala el paquete makemkv-bin. En Windows, busca el makemkvcon.exe en la carpeta de instalación.
 
 🚀 Guía de Uso "Para Dummies"
-Opción A: Versión Portable (Recomendado)
 
-Ideal si solo quieres que el programa funcione sin configurar Python.
+Si te has bajado la Versión Release (Portable), sigue estos pasos:
 
-    Descarga el ZIP de la sección de Releases correspondiente a tu sistema (Windows o Linux).
+    Prepara los binarios: Revisa los archivos de ffmpeg y makemkvcon en la carpeta /bin. Sin esto, el tanque no arranca.
 
-    Descomprime el contenido en una carpeta.
+    Lanzamiento: * Windows: Ejecuta MKVerything.bat.
 
-    Configura la API: Abre el archivo .env con el bloc de notas y pega tu clave de TMDB tras el símbolo =.
+        Linux: Ejecuta MKVerything.sh.
 
-    Ejecuta: * En Windows: Doble clic en MKVerything.bat o MKVerything.exe.
-
-        En Linux: Ejecuta MKVerything.sh.
+    Configuración inicial: La primera vez que inicies, el sistema te pedirá los datos mínimos para empezar la purificación.
 
 Opción B: Modo Arquitecto (Código Fuente)
 
