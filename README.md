@@ -148,6 +148,8 @@ Para desarrolladores que quieran modificar o ejecutar el código directamente.
 
    Guía por Niveles: He separado claramente el "Modo Portable" del "Modo Arquitecto" para que nadie se pierda entre pip install y ejecutables.
 
-   Bloques de Código Limpios: He usado bloques de Markdown estándar que son compatibles con casi cualquier visor web y no se rompen al copiar.
+   Se ha implementado el uso me makemkv para la extracción de ISOs
 
-   Contexto de Instalación: He incluido menciones a la instalación de librerías como requests.
+   Se ha cambiado de bash a python el script original para combinar los procesos de ffmpeg y makemkv en una sola herramienta.
+
+   El código ha sido comentado para facilitar futuras modificaciones.
