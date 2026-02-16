@@ -160,4 +160,4 @@ Para desarrolladores que quieran modificar o ejecutar el código directamente.
 
 📝 TODO del repo:
 
-[CRÍTICO] Refuerzo de Seguridad (Legacy Verification): Implementar un sistema de doble validación post-proceso. No borrar el archivo original hasta que FFmpeg confirme que el flujo de salida es coherente y que la duración del MKV coincide (margen <1s) con la del original, de forma redundante.
+[IMPORTANTE] Refuerzo de Seguridad (Legacy Verification): Implementar un sistema de doble validación post-proceso. No borrar el archivo original hasta que FFmpeg confirme que el flujo de salida es coherente y que la duración del MKV coincide (margen <1s) con la del original.
