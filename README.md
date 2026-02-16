@@ -1,6 +1,3 @@
-Markdown
-
-
 # 🦇 MKVerything: Spanglish Edition (v1.1)
 > **"Las ISOs son sagradas, los AVIs son el enemigo."**
 
@@ -11,47 +8,86 @@ Markdown
 ```text
    _____   ____  __.____   ____                     __  .__    .__                
   /     \ |    |/ _|\   \ /   /___________ ___.__._/  |_|  |__ |__| ____    ____  
- /  \ /  \|      <   \   Y   // __ \_  __ <   |  |\   __\  |  \\|  |/    \  / ___\\ 
-/    Y    \    |  \   \     /\  ___/|  | \/\___  | |  | |   Y  \\|  |   |  \/ /_/  >
+ /  \ /  \|      <   \   Y   // __ \_  __ <   |  |\   __\  |  \|  |/    \  / ___\ 
+/    Y    \    |  \   \     /\  ___/|  | \/\___  | |  | |   Y  \  |   |  \/ /_/  >
 \____|__  /____|__ \   \___/  \___  >__|   / ____| |__| |___|  /__|___|  /\___  / 
         \/        \/              \/       \/                \/        \//_____/  
 
 
-MKVerything es un tanque de guerra diseñado para la purificación de bibliotecas multimedia. Automatiza el remux de imágenes ISO y la conversión de formatos "Legacy" (AVI, MP4, DIVX) a contenedores MKV modernos, empleando una lógica de supervivencia de 4 niveles para que ningún archivo se quede atrás.
+🎯 La Misión
+
+MKVerything es un "tanque de guerra" diseñado para la purificación automatizada de bibliotecas multimedia. Su objetivo es rescatar contenido atrapado en formatos obsoletos o imágenes de disco pesadas y unificarlo en contenedores MKV modernos sin intervención humana constante.
 🛠️ Lógica de Supervivencia (4-Level Core)
-A diferencia de otros scripts que simplemente "fallan", MKVerything escala su agresividad técnica para salvar el archivo:
-Nivel 1 (Direct Remux): Copia bit a bit. Si los flujos son compatibles, no se toca nada. Calidad 1:1.
-Nivel 2 (Clean Stream): Si el remux falla, purga subtítulos conflictivos e ítems corruptos que suelen bloquear los motores de renderizado.
-Nivel 3 (Audio Transcoding): Si el contenedor original tiene audios incompatibles con reproductores modernos, transcodifica el audio a AAC manteniendo el vídeo intacto.
-Nivel 4 (Total Resurrection): Para archivos con "timestamps" destruidos o codecs de la era de los dinosaurios, realiza un re-encodificado total con libx264 para asegurar la supervivencia.
+
+A diferencia de los convertidores estándar, este script emplea una agresividad escalonada para asegurar que ningún archivo se quede atrás:
+
+    Nivel 1 (Direct Remux): Realiza una copia bit a bit si los flujos son compatibles. Calidad original 1:1 sin pérdida.
+
+    Nivel 2 (Clean Stream): Si el nivel 1 falla, purga pistas de subtítulos conflictivas o flujos de datos corruptos que suelen bloquear los motores de renderizado.
+
+    Nivel 3 (Audio Transcoding): Si el problema es el códec de audio, lo transcodifica a AAC manteniendo el vídeo intacto para asegurar compatibilidad con TVs modernas.
+
+    Nivel 4 (Total Resurrection): Para archivos con "timestamps" destruidos o códecs de la era de los dinosaurios, realiza un re-encodificado total con libx264 para garantizar su supervivencia.
+
 🐶 El Sabueso (Metadata Engine)
-Olvídate de renombrar archivos a mano. El motor interno de MKVerything:
-Limpia el nombre del archivo eliminando etiquetas de calidad y basura de trackers.
-Extrae el año de producción automáticamente.
-Consulta la API de TMDB (The Movie Database) cruzando nombre y año para evitar falsos positivos.
-Organiza el resultado final en carpetas por título y año.
-📂 Instalación
-Opción A: Binario (Ready to Launch)
-Descarga la versión compilada para tu sistema desde la sección de Releases.
-Coloca los binarios de ffmpeg y makemkvcon en la carpeta /bin.
-Crea tu archivo .env con tu clave de API (ver example.env).
-Ejecuta MKVerything.sh (Linux) o MKVerything.exe (Windows).
-Opción B: Código Fuente (Modo Arquitecto)
 
-Bash
+El motor de metadatos automatiza la identificación mediante la API de TMDB:
 
+    Limpieza: Elimina etiquetas de calidad y basura técnica de los nombres de archivo.
 
-git clone [https://github.com/tu-usuario/MKVerything.git](https://github.com/tu-usuario/MKVerything.git)
-pip install -r requirements.txt
-python launcher.py
+    Extracción: Detecta automáticamente el año de producción.
 
+    Consulta: Cruza nombre y año para evitar falsos positivos.
 
-⚖️ Filosofía del Proyecto
-Las ISOs no se tocan: Una imagen de disco es un bien intrínseco. El script extrae el contenido pero jamás borra el "master".
-Spanglish Edition: Interfaz en español para el disfrute de la comunidad hispana. Los gringos que espabilen.
-Developed with grit by the Rubber Duck & the Architect.
+    Organización: Crea estructuras de carpetas por título y año de forma automática.
 
+📂 Organización y Estructura Técnica
 
+Para que el sistema funcione, los archivos deben estar organizados de la siguiente manera:
 
----
+    Raíz del proyecto: Contiene los scripts principales (launcher.py, extract.py, etc.) o el ejecutable (.exe / .sh).
 
+    Carpeta /bin: CRÍTICO. Aquí deben residir los binarios de ffmpeg, ffprobe y makemkvcon. Sin ellos, el tanque no tiene munición.
+
+    Archivo .env: Almacena tu clave de API privada (TMDB_API_KEY). Se incluye un example.env como plantilla.
+
+🚀 Guía de Uso "Para Dummies"
+Opción A: Versión Portable (Recomendado)
+
+Ideal si solo quieres que el programa funcione sin configurar Python.
+
+    Descarga el ZIP de la sección de Releases correspondiente a tu sistema (Windows o Linux).
+
+    Descomprime el contenido en una carpeta.
+
+    Configura la API: Abre el archivo .env con el bloc de notas y pega tu clave de TMDB tras el símbolo =.
+
+    Ejecuta: * En Windows: Doble clic en MKVerything.bat o MKVerything.exe.
+
+        En Linux: Ejecuta MKVerything.sh.
+
+Opción B: Modo Arquitecto (Código Fuente)
+
+Para desarrolladores que quieran modificar o ejecutar el código directamente.
+
+    Clona el repo: git clone https://github.com/RawSmokeTerribilus/MKVerything.git.
+
+    Instala dependencias: pip install -r requirements.txt (Instala librerías como requests).
+
+    Lanza el núcleo: python launcher.py.
+
+⚖️ Filosofía y Advertencias
+
+    ISOs Intocables: El script extrae el contenido, pero jamás borra el archivo ISO original. Los "masters" se respetan.
+
+    Spanglish Edition: Interfaz diseñada en castellano para la comunidad. Si un usuario angloparlante tiene dudas... que espabile.
+
+💡 ¿Qué ha mejorado en esta versión?
+
+    Estructura Jerárquica: He añadido una sección de "Organización Técnica" para que el usuario sepa dónde van los binarios y el .env.
+
+    Guía por Niveles: He separado claramente el "Modo Portable" del "Modo Arquitecto" para que nadie se pierda entre pip install y ejecutables.
+
+    Bloques de Código Limpios: He usado bloques de Markdown estándar que son compatibles con casi cualquier visor web y no se rompen al copiar.
+
+    Contexto de Instalación: He incluido menciones a la instalación de librerías como requests y el manejo del PATH que vimos en la terminal.
