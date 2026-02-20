@@ -100,7 +100,7 @@ Cada modo está diseñado para un escenario específico:
 **Salida esperada:**
 ```
 /destino/
-└── nombre_iso.mkv  (± 8GB típico para películas)
+└── nombre_iso.mkv  (± 80% del tamaño del original al ser un remux)
 ```
 
 ---
