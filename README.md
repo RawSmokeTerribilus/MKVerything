@@ -72,7 +72,7 @@ Ejecuta el archivo MKVerything.bat.
 Eso es todo. El menú TUI te guiará desde ahí.
 
 
-**Para Desarrolladores que quieran usar el código fuente:** Ver sección [Modo Arquitecto](#instalación-para-desarrolladores) al final.
+**Para Desarrolladores que quieran usar el código fuente:** Ver sección [📦 Instalación para Desarrolladores](#-instalación-para-desarrolladores) al final.
 
 ---
 
