@@ -236,9 +236,9 @@ God Mode es una **tubería orquestada** que ejecuta 4 subprocesos en secuencia:
 
 ```bash
 # El TUI te pedirá:
-# 1. Carpeta origen (ISOs + videos legacy)
-# 2. Carpeta destino para extracciones
-# 3. Confirmar: ¿Borrar archivos originales tras éxito? (S/N)
+# 1. Carpeta origen (ISOs y videos a procesar)
+# 2. Carpeta destino para extracciones ( ISOs solo, si no seleccionas nada, usa la misma de la imagen)
+# 3. Confirmar: ¿Quieres lanzar el proceso? (S/N)
 ```
 
 ### **Salida Esperada:**
