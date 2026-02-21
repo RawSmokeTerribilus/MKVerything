@@ -41,7 +41,7 @@ def limpiar_pantalla():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def configurar_entorno():
-    """Inyecta binarios en el PATH."""
+    """Inyecta binarios en el PATH y librerías en LD_LIBRARY_PATH."""
     sistema = platform.system()
     path_binario = ""
     if sistema == "Windows":
@@ -52,7 +52,12 @@ def configurar_entorno():
 
     if path_binario and os.path.exists(path_binario):
         os.environ["PATH"] += os.pathsep + path_binario
+        
+        # En Linux, también configurar LD_LIBRARY_PATH para que los binarios
+        # encuentren sus librerías .so (especialmente importantes para ffmpeg, mkvtoolnix)
         if sistema == "Linux":
+            ld_lib_path = os.environ.get("LD_LIBRARY_PATH", "")
+            os.environ["LD_LIBRARY_PATH"] = path_binario + (os.pathsep + ld_lib_path if ld_lib_path else "")
             subprocess.run(f"chmod +x {path_binario}/* 2>/dev/null", shell=True)
     return sistema
 
