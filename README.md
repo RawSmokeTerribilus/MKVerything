@@ -72,7 +72,7 @@ Ejecuta el archivo MKVerything.bat.
 Eso es todo. El menú TUI te guiará desde ahí.
 
 
-**Para Desarrolladores que quieran usar el código fuente:** Ver sección [Modo Arquitecto](#instalación-para-desarrolladores) al final.
+**Para Desarrolladores que quieran usar el código fuente:** Ver sección [📦 Instalación para Desarrolladores](#-instalación-para-desarrolladores) al final.
 
 ---
 
@@ -100,7 +100,7 @@ Cada modo está diseñado para un escenario específico:
 **Salida esperada:**
 ```
 /destino/
-└── nombre_iso.mkv  (± 8GB típico para películas)
+└── nombre_iso.mkv  (± 80% del tamaño del original al ser un remux)
 ```
 
 ---
