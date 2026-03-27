@@ -1,3 +1,7 @@
+### THIS REPOSITORY IS DEPRECATED, PLEASE INSTEAD USE: https://github.com/RawSmokeTerribilus/Singularity
+### ÉSTE REPOSITORIO ESTÁ FUERA DE SU VIDA ÚTIL y totalmente desactualizado, usar: https://github.com/RawSmokeTerribilus/Singularity
+
+
 # 🦇 MKVerything: V2.beta "The Purge"
 > **"Las ISOs son sagradas, los AVIs son el enemigo."**
 
